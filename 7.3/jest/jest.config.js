@@ -7,12 +7,12 @@ const config = {
       lines: 100,
     },
   },
-    collectCoverageFrom: [
-      '**/*.{js,jsx}',
-      '!**/node_modules/**',
-      '!**/coverage/**',
-      '!**/jest.config.js/**',
-    ],
-  };
-  
-  module.exports = config;
+  collectCoverageFrom: [
+    "**/*.{js,jsx}",
+    "!**/node_modules/**",
+    "!**/coverage/**",
+    "!**/jest.config.js/**",
+  ],
+};
+
+module.exports = config;
