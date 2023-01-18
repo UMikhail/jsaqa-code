@@ -14,4 +14,18 @@ describe("Books names test suit", () => {
       "Гарри Поттер",
     ]);
   });
+
+  it("The titles of the books are the same", () => {
+    expect(
+      sorting.sortByName([
+        "Гарри Поттер",
+        "Гарри Поттер",
+        "Гарри Поттер",
+      ])
+    ).toEqual([
+      "Гарри Поттер",
+      "Гарри Поттер",
+      "Гарри Поттер",
+    ]);
+  });
 });
