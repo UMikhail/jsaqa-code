@@ -1,24 +1,24 @@
 const { test, expect } = require("@playwright/test");
 
 test("test", async ({ page }) => {
-  test.setTimeout(120000);
+  test.setTimeout(60000);
   // Go to https://netology.ru/free/management#/
   await page.goto("https://netology.ru/free/management#/", { timeout: 60000 });
 
   // Click a
-  await page.click("a");
+  await page.click("[class=\"node_modules-@netology-shared-src-reallyShared-ui-kit-old-components-v1-Logo--logo--q4NN9 node_modules-@netology-shared-src-reallyShared-ui-kit-old-components-v1-Logo--black-text--Gj_Ox node_modules-@netology-shared-src-reallyShared-ui-kit-old-components-v1-Logo--active--k1spp\"]");
   await expect(page).toHaveURL("https://netology.ru/");
 
   // Click text=Учиться бесплатно
   await page.click("text=Учиться бесплатно");
   await expect(page).toHaveURL("https://netology.ru/free");
 
-  page.click("text=Бизнес и управление");
+  page.click("[data-direction=\"management\"]");
 
-  // Click text=Как перенести своё дело в онлайн
-  await page.click("text=Как перенести своё дело в онлайн");
+  //
+  await page.click("[class=\"src-Landings-pages-FreeProducts-components-Courses-components-CourseCard--title--QnzhW\"]");
   await expect(page).toHaveURL(
-    "https://netology.ru/programs/kak-perenesti-svoyo-delo-v-onlajn-bp"
+    "https://netology.ru/programs/product-project-marathon"
   );
 });
 
@@ -27,7 +27,7 @@ test("test", async ({ page }) => {
 const { email, password } = require("../user.mjs");
 
 test("validTest", async ({ page }) => {
-  test.setTimeout(120000);
+  test.setTimeout(100000);
 
   await page.goto("https://netology.ru");
 
@@ -55,7 +55,7 @@ test("validTest", async ({ page }) => {
 //////////////////////////////////////////////////////
 
 test("invalidTest", async ({ page }) => {
-  test.setTimeout(120000);
+  test.setTimeout(100000);
 
   await page.goto("https://netology.ru");
 
@@ -76,6 +76,6 @@ test("invalidTest", async ({ page }) => {
     page.click('[data-testid="login-submit-btn"]'),
   ]);
   await expect(
-    page.locator("node_modules-@netology-shared-src-reallyShared-components-ui-Form-Hint--hint--dKM3o inputHint")
+    page.locator("[data-testid=\"login-error-hint\"]")
   ).toHaveText("Вы ввели неправильно логин или пароль");
 });
