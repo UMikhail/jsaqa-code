@@ -1,8 +1,8 @@
 Feature: Booking a seat
     Scenario: Booking a VIP seat
         Given user is on "qamid.tmweb.ru" page
-        When user chooses by day "7"
-        When user chooses movie "2" show "2"
+        When user chooses by day "5"
+        When user chooses movie "3" show "2"
         When user chooses seat Vip "1"
         When user click "button"
         Then user sees text "Вы выбрали билеты:"

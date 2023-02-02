@@ -21,8 +21,8 @@ describe("booking", () => {
   });
 
   test("booking a VIP seat", async () => {
-    await generateDays(page, "7");
-    await generateMoviTime(page, "2", "2");
+    await generateDays(page, "5");
+    await generateMoviTime(page, "3", "2");
     await page.waitForSelector("h1");
     await vip(page, "1");
     await clickElement(page, ".acceptin-button");
