@@ -1,14 +1,20 @@
 {
-  "name": "cypress-test",
+  "name": "7.6",
   "version": "1.0.0",
-  "description": "first tests with Cypress",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "chromeLaptop1": "npx cypress run --config-file cypress.config.js --browser chrome",
+    "chromeLaptop2": "npx cypress run --config-file cypress.config.js --browser chrome --headed",
+    "electronMobile1": "npx cypress run --config-file cypress.env.config.js --browser electron",
+    "electronMobile2": "npx cypress run --config-file cypress.env.config.js --browser electron --headed"
   },
-  "author": "OM",
+  "keywords": [
+    "cypress"
+  ],
+  "author": "Mikhail",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^8.3.0"
+    "cypress": "^12.5.1"
   }
 }
