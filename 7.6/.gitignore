@@ -3,4 +3,4 @@
 /user.js
 /test-results
 /playwright-report
-/videos
+/cypress/videos
